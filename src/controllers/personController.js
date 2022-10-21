@@ -1,6 +1,9 @@
-var data = ["Nome", "Sobrenome"];
+var data = ["Nome"];
 
 exports.get = (req, res, next) => {
+
+
+  
   res.status(201).send(data);
 };
 
