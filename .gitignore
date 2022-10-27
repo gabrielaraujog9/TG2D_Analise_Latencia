@@ -148,4 +148,8 @@ dist
 # Replit Nix config file
 replit.nix
 
+# JAVA
+.class
+
 # End of https://www.toptal.com/developers/gitignore/api/node,replit
+
