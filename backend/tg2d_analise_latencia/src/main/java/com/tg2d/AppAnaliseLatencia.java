@@ -18,7 +18,12 @@ public class AppAnaliseLatencia
         scan.close();
         Verification verificarLatencia = new Verification(address, timeout);
         verificarLatencia.start();
-        long[] millis = verificarLatencia.resultVerification();
+        long[][] millis = verificarLatencia.resultVerification();
+        
+        for(int i = 0; i < millis.length; i++) {
+        	System.out.println(millis[i][0]);
+        	System.out.println(millis[i][1]);
+        }
         
     }
 }

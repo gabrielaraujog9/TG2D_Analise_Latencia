@@ -1,5 +1,6 @@
 package com.tg2d;
 
+
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -8,7 +9,7 @@ import java.net.UnknownHostException;
 public class Verification {
   private InetAddress address;
   private long nanos;
-  private long[] millis;
+  private long[][] millis;
   private long iterations;
   private int timeout;
 
@@ -22,7 +23,7 @@ public class Verification {
     this.timeout = timeout * 1000;
     this.iterations = 0;
     this.nanos = 0;
-    this.millis = new long[timeout * 2];
+    this.millis = new long[timeout * 2][2];
     
   }
 
@@ -30,6 +31,7 @@ public class Verification {
     try{
       if(address.isReachable(5000)){
         long comparacao = System.currentTimeMillis();
+        long time = 0;
         while (comparacao + this.timeout > System.currentTimeMillis()) {
           iterations++;
           try{
@@ -39,10 +41,12 @@ public class Verification {
           }catch(IOException e){
             System.out.println("Failed to reach host");
           }
-          millis[(int)iterations - 1] = Math.round(nanos / Math.pow(10, 6));
-          System.out.println("Resposta com tempo de = " + millis[(int)iterations - 1] + " ms");
+          time = time + 5000;
+          millis[(int)iterations - 1][0] = time;
+          millis[(int)iterations - 1][1] = Math.round(nanos / Math.pow(10, 6));
+          System.out.println("Resposta com tempo de = " + millis[(int)iterations - 1][1] + " ms");
           try{
-            Thread.sleep(Math.max(0, 500 - millis[(int)iterations - 1]));
+            Thread.sleep(Math.max(0, 500 - millis[(int)iterations - 1][1]));
           }catch(InterruptedException e){
             break;
           }
@@ -59,7 +63,7 @@ public class Verification {
 
   }
 
-  public long[] resultVerification(){
+  public long[][] resultVerification(){
     
     return millis;
   }
