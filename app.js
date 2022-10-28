@@ -9,5 +9,7 @@ app.set("view options", {layout: false});
 app.use(express.static(__dirname + '/public'));
 
 app.use('/', index);
+app.use(express.json()) // for parsing application/json
+app.use(express.urlencoded({ extended: true }))
 app.use('/persons', personRoute);
 module.exports = app;

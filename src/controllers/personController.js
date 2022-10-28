@@ -4,7 +4,8 @@ controller.get = (req, res, next) => {
   res.status(201).send(data);
 };
 controller.post = (req, res, next) => {
-  res.status(201).send(res.body)
+  data = req.body.array;
+  res.status(201).json(req.body)
 };
 
 controller.put = (req, res, next) => {
