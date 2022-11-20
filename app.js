@@ -3,7 +3,7 @@ const app = express();
 const router = express.Router();
 //Rotas
 const index = require('./src/routes/index');
-const personRoute = require('./src/routes/personRouter');
+const dataRouter = require('./src/routes/dataRouter');
 //app.
 app.set("view options", {layout: false});
 app.use(express.static(__dirname + '/public'));
@@ -11,5 +11,5 @@ app.use(express.static(__dirname + '/public'));
 app.use('/', index);
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true }))
-app.use('/persons', personRoute);
+app.use('/data', dataRouter);
 module.exports = app;
