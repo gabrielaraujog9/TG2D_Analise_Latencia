@@ -5,10 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.tg2d</groupId>
-  <artifactId>tg2d_analise_latencia</artifactId>
+  <artifactId>analise_latencia</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>tg2d_analise_latencia</name>
+  <name>analise_latencia</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -21,11 +21,23 @@
   <dependencies>
 
     <dependency>
-      <groupId>com.survivingwithandroid</groupId>
-      <artifactId>weatherlib_okhttpclient</artifactId>
-      <version>1.6.0</version>
-      <type>aar</type>
-    </dependency>
+    <groupId>org.json</groupId>
+    <artifactId>json</artifactId>
+    <version>20160810</version>
+</dependency>
+
+
+   
+
+
+ 
+<dependency>
+    <groupId>com.squareup.okhttp3</groupId>
+    <artifactId>okhttp</artifactId>
+    <version>4.9.0</version>
+</dependency>
+
+
 
     <dependency>
       <groupId>junit</groupId>
