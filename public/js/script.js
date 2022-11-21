@@ -27,7 +27,7 @@ async function drawVisualization() {
   var media =  dadosMedias.media
 
   for (var i = 0; i < dadosMedias.data.length; i++) {
-    debugger
+    
     dadosMedias.data[i].push(media)
   }
   dadosMedias.data.unshift(['Milisegundos', 'Latência', 'Média'])
@@ -44,7 +44,22 @@ async function drawVisualization() {
   var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
 
   chart.draw(await data, options);
-
+  debugger
+  atualizarMedia(media)
 
 
 }
+function atualizarMedia(media){
+  var h1= document.getElementsByClassName("valor")
+  h1[0].innerHTML=media.toFixed(1)+" ms"
+  var h3= document.getElementsByClassName("texto_resultado")
+  if(media>=100){
+    h3[0].innerHTML="Seu tempo de resposta está muito elevado."
+  }
+  else if(media>=80){
+     h3[0].innerHTML="Seu tempo de resposta está razoável."
+  }
+  else{
+     h3[0].innerHTML="Seu tempo de resposta está rápido."
+  }
+} 
