@@ -1,7 +1,6 @@
 package com.tg2d;
 
 import java.io.IOException;
-import java.net.http.HttpResponse;
 
 import org.json.JSONObject;
 
