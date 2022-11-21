@@ -24,13 +24,13 @@ public class AppAnaliseLatencia
         Verification verificarLatencia = new Verification(address, timeout);
         verificarLatencia.start();
         long[][] millis = verificarLatencia.resultVerification();
-        
 
         ServiceApi serviceApi = new ServiceApi(millis);
         boolean verificacao = serviceApi.createRequest();
-        System.out.println(verificacao);
+        
         
         if(verificacao){
+            System.out.println("Abrindo Página!");
             URI link = new URI("http://localhost:3000");
             Desktop.getDesktop().browse(link);
         }
@@ -40,3 +40,5 @@ public class AppAnaliseLatencia
         
     }
 }
+
+//www.dw.com

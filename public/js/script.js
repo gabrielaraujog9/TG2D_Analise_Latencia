@@ -1,5 +1,5 @@
 async function gerarDadosMedias() {
-  const url = 'https://TG2DAnaliseLatencia.thiagofranca2.repl.co/data/'
+  const url = "http://localhost:3000/data/"//'https://TG2DAnaliseLatencia.thiagofranca2.repl.co/data/'
   var DadosMedias = fetch(url)
     .then(response => response.json())
     .then(teste => teste.data)
