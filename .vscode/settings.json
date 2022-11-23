@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "/subscriptions/b927db00-6882-4344-a0b0-b63abe5981bd/AppServices/subscriptions/b927db00-6882-4344-a0b0-b63abe5981bd/resourceGroups/ProjetoTG2D/providers/Microsoft.Web/sites/projetotg2d",
+  "appService.deploySubpath": "."
+}

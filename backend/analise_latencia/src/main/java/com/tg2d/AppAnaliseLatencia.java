@@ -10,6 +10,7 @@ public class AppAnaliseLatencia
 {
     public static void main( String[] args ) throws URISyntaxException, IOException
     {
+        
         Scanner scan = new Scanner(System.in);
 
         System.out.println();
@@ -31,7 +32,7 @@ public class AppAnaliseLatencia
         
         if(verificacao){
             System.out.println("Abrindo Página!");
-            URI link = new URI("http://localhost:3000");
+            URI link = new URI("https://projetotg2d.azurewebsites.net/");
             Desktop.getDesktop().browse(link);
         }
         else{

@@ -13,7 +13,7 @@ import okhttp3.Response;
 
 
 public class ServiceApi {
-  private String url = "http://localhost:3000/data/";
+  private String url = "https://projetotg2d.azurewebsites.net/data/";//"http://localhost:3000/data/";
   private long[][] data;
 
   public ServiceApi(long[][] data) {

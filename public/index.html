@@ -1,33 +1,39 @@
 <!DOCTYPE html5>
 <html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <title>📉 TG2D</title>
 
-<head>
-  <meta charset="utf-8">
-  <title> 📉 TG2D </title>
-
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
     <script type="text/javascript" src="./js/script.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
   </head>
-  <body style="margin: 0; width: 100%; height: 100%">
-    <div style="display: flex; width: 100vw; height: 100vh">
-      <div id="curve_chart" style="margin-top:10%; width: 60%; height: 60%">       
+  <body>
+    <div class="w3-container w3-margin-bottom w3-blue  w3-center">
+      <h1>TG2D - Análise de Latência</h1>
+    </div>
+    
+    <div class="w3-row w3-padding-64 ">
+      <div class="w3-half  w3-center ">
+        <div  id="curve_chart"></div>
       </div>
-    <div style="margin-top: 10%; width: 30%; height: 50%">
-      <h4 class="texto_padrão" style="margin-top: 24%; text-color: black; text-align: center; font-family: arial"> Sua média de latência é de</h4>
-   <!-- 
-  Latência de 0 a 40: "(VALOR)ms" (w3-text-green)
-  Latência de 41 a 100: "(VALOR)ms" (w3-text-amber)
-  Latência acima de 101: "(VALOR)ms" (w3-text-red).
-  -->     
-      <h1 class="valor" style="text-color: black; text-align: center; font-family: arial">32 ms</h1>
- <!-- 
-  Latência de 0 a 40: "Seu tempo de resposta está muito rápido." (w3-text-green)
-  Latência de 41 a 100: "Seu tempo de resposta está regular." (w3-text-amber)
-  Latência acima de 101: "Seu tempo de resposta está devagar." (w3-text-red)
-  --> 
-      <h3 class="texto_resultado" style="margin-top: 10%; text-color: black; text-align: center; font-family: arial"> Seu tempo de resposta está muito rápido.</h3>
+      <div class="w3-half w3-center">
+        <div class="w3-display-container " style="height:400px;">
+          <div class="w3-display-middle"> 
+           
+              <h4 class="texto_padrão"><strong>Sua média de latência é de</strong> </h4>
+              <h1 class="valor"> </h1>
+              <h3 class="texto_resultado" > </h3>
+            
+            
+          </div>
+        </div>
+        
+      </div>
     </div>
-    </div>
+  
   </body>
-
 </html>
