@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const router = express.Router();
 //Rotas
 const index = require('./src/routes/index');
 const dataRouter = require('./src/routes/dataRouter');
